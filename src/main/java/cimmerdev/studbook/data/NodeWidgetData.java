@@ -9,6 +9,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
+import net.minecraft.world.entity.Mob;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
@@ -85,14 +86,26 @@ public class NodeWidgetData {
                 LocalPlayer player = mc.player;
                 if (player != null) {
                     cachedEntity.tickCount = mc.player.tickCount;
-                    cachedEntity.setYRot(0.0F);
-                    cachedEntity.setXRot(0.0F);
-                    cachedEntity.yRotO = 0.0F;
-                    cachedEntity.xRotO = 0.0F;
-                    cachedEntity.setYHeadRot(0.0F);
-                    cachedEntity.yHeadRotO = 0.0F;
-                    cachedEntity.yBodyRot = 0.0F;
-                    cachedEntity.yBodyRotO = 0.0F;
+                }
+                cachedEntity.setYRot(0.0F);
+                cachedEntity.setXRot(0.0F);
+                cachedEntity.yRotO = 0.0F;
+                cachedEntity.xRotO = 0.0F;
+                cachedEntity.setYHeadRot(0.0F);
+                cachedEntity.yHeadRotO = 0.0F;
+                cachedEntity.yBodyRot = 0.0F;
+                cachedEntity.yBodyRotO = 0.0F;
+                cachedEntity.setDeltaMovement(net.minecraft.world.phys.Vec3.ZERO);
+                cachedEntity.walkAnimation.setSpeed(0.0F);
+                cachedEntity.walkAnimation.position(0.0F);
+                cachedEntity.setPose(net.minecraft.world.entity.Pose.STANDING);
+                cachedEntity.swingTime = 0;
+                cachedEntity.stopUsingItem();
+                if (cachedEntity instanceof Mob mob) {
+                    mob.getLookControl().setLookAt(mob.getX(), mob.getEyeY(), mob.getZ() + 1.0, 0.0F, 0.0F);
+                    mob.setTarget(null);
+                    mob.setLastHurtByMob(null);
+                    mob.getNavigation().stop();
                 }
                 return cachedEntity;
             }
