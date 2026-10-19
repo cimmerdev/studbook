@@ -1,0 +1,77 @@
+{
+  "gender_tag": {
+    "tag_name": "gender",
+    "variable_type": "byte",
+    "values": [
+      {
+        "raw_value": "0",
+        "translated_value": {
+            "translate": "entity.horse_colors.mule.female",
+            "color": "#aa557f"
+        },
+        "gender_enum": "female",
+        "required_tags": [
+          {
+            "tag_name": "Species",
+            "variable_type": "string",
+            "values": [
+              "MULE"
+            ]
+          }
+        ]
+      },
+      {
+        "raw_value": "0",
+        "translated_value": {
+          "translate": "entity.horse_colors.hinny.female",
+          "color": "#aa557f"
+        },
+        "gender_enum": "female",
+        "required_tags": [
+          {
+            "tag_name": "Species",
+            "variable_type": "string",
+            "values": [
+              "HINNY"
+            ]
+          }
+        ]
+      },
+      {
+        "raw_value": "1",
+        "translated_value": {
+            "translate": "entity.horse_colors.mule.male",
+            "color": "#557faa"
+        },
+        "gender_enum": "male",
+        "required_tags": [
+          {
+            "tag_name": "Species",
+            "variable_type": "string",
+            "values": [
+              "MULE"
+            ]
+          }
+        ]
+      },
+      {
+        "raw_value": "1",
+        "translated_value": {
+          "translate": "entity.horse_colors.hinny.male",
+          "color": "#557faa"
+        },
+        "gender_enum": "male",
+        "required_tags": [
+          {
+            "tag_name": "Species",
+            "variable_type": "string",
+            "values": [
+              "HINNY"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tags": []
+}

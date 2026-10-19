@@ -1,0 +1,13 @@
+{
+  "required": true,
+  "minVersion": "0.8.5",
+  "package": "cimmerdev.studbook.compat.geneticanimals",
+  "plugin": "cimmerdev.studbook.compat.geneticanimals.GeneticAnimalsMixinPlugin",
+  "compatibilityLevel": "JAVA_17",
+  "refmap": "mixins.studbook.refmap.json",
+  "mixins": [
+    "EAnimalPregnancyStartMixin"
+  ],
+  "client": [],
+  "server": []
+}

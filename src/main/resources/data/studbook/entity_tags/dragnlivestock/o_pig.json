@@ -1,0 +1,61 @@
+{
+  "gender_tag": {
+    "tag_name": "Gender",
+    "variable_type": "int",
+    "values": [
+      {
+        "raw_value": "0",
+        "translated_value": {
+          "translate": "tooltip.dragnlivestock.jade.female.tooltip",
+          "color": "#fc037e"
+        },
+        "gender_enum": "female"
+      },
+      {
+        "raw_value": "1",
+        "translated_value": {
+          "translate": "tooltip.dragnlivestock.jade.male.tooltip",
+          "color": "#0380fc"
+        },
+        "gender_enum": "male"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "tag_name": "Breed",
+      "translated_name": {
+        "translate": "Breed"
+      },
+      "variable_type": "int",
+      "mapped_values": {
+        "0": {
+          "translate": "Yorkshire"
+        },
+        "1": {
+          "translate": "Pot Belly"
+        },
+        "2": {
+          "translate": "Guinea Hog"
+        },
+        "3": {
+          "translate": "Kunekune"
+        },
+        "4": {
+          "translate": "Poland China"
+        },
+        "5": {
+          "translate": "Berkshire"
+        }
+      }
+    },
+    {
+      "tag_name": "Quality",
+      "translated_name": {
+        "translate": "Quality (%)"
+      },
+      "variable_type": "int",
+      "mapped_values": {}
+    }
+  ]
+}

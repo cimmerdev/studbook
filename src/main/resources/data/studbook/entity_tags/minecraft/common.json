@@ -1,0 +1,28 @@
+{
+    "tags": [
+      {
+        "tag_name": "minecraft:generic.max_health",
+        "translated_name": {
+          "translate": "attribute.name.generic.max_health"
+        },
+        "variable_type": "attribute",
+        "mapped_values": {}
+      },
+      {
+        "tag_name": "minecraft:generic.movement_speed",
+        "translated_name": {
+          "translate": "attribute.name.generic.movement_speed"
+        },
+        "variable_type": "attribute",
+        "mapped_values": {}
+      },
+      {
+        "tag_name": "minecraft:horse.jump_strength",
+        "translated_name": {
+          "translate": "attribute.name.horse.jump_strength"
+        },
+        "variable_type": "attribute",
+        "mapped_values": {}
+      }
+    ]
+}

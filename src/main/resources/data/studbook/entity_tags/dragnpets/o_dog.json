@@ -1,0 +1,134 @@
+{
+    "gender_tag": {
+        "tag_name": "Gender",
+        "variable_type": "int",
+        "values": [
+            {
+                "raw_value": "0",
+                "translated_value": {
+                    "translate": "tooltip.dragnlivestock.jade.female.tooltip",
+                    "color": "#fc037e"
+                },
+                "gender_enum": "female"
+            },
+            {
+                "raw_value": "1",
+                "translated_value": {
+                    "translate": "tooltip.dragnlivestock.jade.male.tooltip",
+                    "color": "#0380fc"
+                },
+                "gender_enum": "male"
+            }
+        ]
+    },
+    "tags": [
+    {
+      "tag_name": "Breed",
+      "translated_name": {
+        "translate": "Breed"
+      },
+      "variable_type": "int",
+        "mapped_values": {
+            "0": {
+                "translate": "Mutt"
+            },
+            "1": {
+                "translate": "American Ridgeback"
+            },
+            "2": {
+                "translate": "Australian Shepherd"
+            },
+            "3": {
+                "translate": "Beagle"
+            },
+            "4": {
+                "translate": "Bernese"
+            },
+            "5": {
+                "translate": "Bloodhound"
+            },
+            "6": {
+                "translate": "Border Collie"
+            },
+            "7": {
+                "translate": "Cocker Spaniel"
+            },
+            "8": {
+                "translate": "Coonhound"
+            },
+            "9": {
+                "translate": "Doberman"
+            },
+            "10": {
+                "translate": "Foxhound"
+            },
+            "11": {
+                "translate": "Husky"
+            },
+            "12": {
+                "translate": "Jack Russel"
+            },
+            "13": {
+                "translate": "Labrador"
+            },
+            "14": {
+                "translate": "Pyreness"
+            },
+            "15": {
+                "translate": "Rottweiler"
+            },
+            "16": {
+                "translate": "Whippet"
+            },
+            "17": {
+                "translate": "Pitbull"
+            },
+            "18": {
+                "translate": "German Shepherd"
+            },
+            "19": {
+                "translate": "Borzoi"
+            },
+            "20": {
+                "translate": "Newfoundland"
+            },
+            "21": {
+                "translate": "Kangal"
+            },
+            "22": {
+                "translate": "Belgian Malinois"
+            },
+            "23": {
+                "translate": "Tibetan Mastiff"
+            },
+            "24": {
+                "translate": "Collie"
+            },
+            "25": {
+                "translate": "Wolfdog"
+            },
+            "26": {
+                "translate": "Dalmatian"
+            },
+            "27": {
+                "translate": "Dachshund"
+            },
+            "28": {
+                "translate": "Jagdterrier"
+            },
+            "29": {
+                "translate": "Bull Terrier"
+            },
+            "30": {
+                "translate": "Poodle"
+            },
+            "31": {
+                "translate": "Chihuahua"
+            },
+            "32": {
+                "translate": "Xoloitxcuintli"
+            }
+        }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "studbook.compat.jade.tooltip.parenta": "1st parent: §r%s",
+  "studbook.compat.jade.tooltip.parentb": "2nd parent: §r%s",
+  "studbook.compat.jade.tooltip.sire": "Sire: §r%s",
+  "studbook.compat.jade.tooltip.dam": "Dam: §r%s",
+  "studbook.chat.info.no_lineage": "No ancestors or descendants tracked for this entity.",
+  "studbook.gui.sidepanel.gender": "Gender: ",
+  "studbook.gui.sidepanel.gender.female": "Female",
+  "studbook.gui.sidepanel.gender.male": "Male",
+  "studbook.gui.sidepanel.gender.omnigender": "Omnigender",
+  "studbook.gui.sidepanel.status": "Status: ",
+  "studbook.gui.sidepanel.status.alive": "Alive",
+  "studbook.gui.sidepanel.status.unknown": "Unknown",
+  "studbook.gui.sidepanel.status.deceased": "Deceased",
+  "studbook.gui.sidepanel.breeder": "Bred by %s",
+  "studbook.gui.sidepanel.birth.days_ago": "born %d day(s) ago",
+  "studbook.gui.sidepanel.birth.days_since": "born on day %d",
+  "studbook.gui.sidepanel.death.days_ago": ", %d day(s) ago",
+  "studbook.gui.sidepanel.death.days_since": ", on day %d",
+  "studbook.gui.viewport.title": "Lineage Tree Viewport"
+}

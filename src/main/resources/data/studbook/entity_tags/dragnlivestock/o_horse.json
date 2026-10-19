@@ -1,0 +1,173 @@
+{
+  "gender_tag": {
+    "tag_name": "Gender",
+    "variable_type": "int",
+    "values": [
+      {
+        "raw_value": "0",
+        "translated_value": {
+          "translate": "tooltip.dragnlivestock.jade.female.tooltip",
+          "color": "#fc037e"
+        },
+        "gender_enum": "female"
+      },
+      {
+        "raw_value": "1",
+        "translated_value": {
+          "translate": "tooltip.dragnlivestock.jade.male.tooltip",
+          "color": "#0380fc"
+        },
+        "gender_enum": "male"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "tag_name": "Breed",
+      "translated_name": {
+        "translate": "Breed"
+      },
+      "variable_type": "int",
+      "mapped_values": {
+        "0": {
+          "translate": "Mustang"
+        },
+        "1": {
+          "translate": "Ardennes"
+        },
+        "2": {
+          "translate": "Kladruber"
+        },
+        "3": {
+          "translate": "Fjord"
+        },
+        "4": {
+          "translate": "Thoroughbred"
+        },
+        "5": {
+          "translate": "Friesian"
+        },
+        "6": {
+          "translate": "Irish Cob"
+        },
+        "7": {
+          "translate": "American Quarter"
+        },
+        "8": {
+          "translate": "Percheron"
+        },
+        "9": {
+          "translate": "Selle Francais"
+        },
+        "10": {
+          "translate": "Marwari"
+        },
+        "11": {
+          "translate": "Mongolian"
+        },
+        "12": {
+          "translate": "Shire"
+        },
+        "13": {
+          "translate": "Akhal-Teke"
+        },
+        "14": {
+          "translate": "American SOldier"
+        },
+        "15": {
+          "translate": "Welsh"
+        },
+        "16": {
+          "translate": "Connemara"
+        },
+        "17": {
+          "translate": "Haflinger"
+        },
+        "18": {
+          "translate": "Oldenburger"
+        },
+        "19": {
+          "translate": "Shetland"
+        },
+        "20": {
+          "translate": "Standardbred"
+        },
+        "21": {
+          "translate": "Trakehner"
+        },
+        "22": {
+          "translate": "Boulonnais"
+        },
+        "23": {
+          "translate": "Lusitano"
+        }
+      }
+    },
+    {
+      "tag_name": "Eyes",
+      "translated_name": {
+        "translate": "Eye Color"
+      },
+      "variable_type": "int",
+      "mapped_values": {
+        "0": {
+          "translate": "Dark Brown"
+        },
+        "1": {
+          "translate": "Brown"
+        },
+        "2": {
+          "translate": "Amber"
+        },
+        "3": {
+          "translate": "Gold"
+        },
+        "4": {
+          "translate": "Dark Blue"
+        },
+        "5": {
+          "translate": "Blue"
+        },
+        "6": {
+          "translate": "Green"
+        },
+        "7": {
+          "translate": "Blue & Gold"
+        },
+        "8": {
+          "translate": "Brown & Green"
+        },
+        "9": {
+          "translate": "Brown & Blue"
+        },
+        "10": {
+          "translate": "Red"
+        }
+      }
+    },
+    {
+      "tag_name": "HealthTrained",
+      "translated_name": {
+        "translate": "Health Training Bonus"
+      },
+      "variable_type": "int",
+      "mapped_values": {}
+    },
+    {
+      "tag_name": "SpeedTrained",
+      "translated_name": {
+        "translate": "Speed Training Bonus"
+      },
+      "variable_type": "int",
+      "mapped_values": {}
+    },
+    {
+      "tag_name": "JumpTrained",
+      "translated_name": {
+        "translate": "Jump Training Bonus"
+      },
+      "variable_type": "int",
+      "mapped_values": {}
+    }
+  ]
+}

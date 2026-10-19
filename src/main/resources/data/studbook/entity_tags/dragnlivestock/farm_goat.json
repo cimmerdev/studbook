@@ -1,0 +1,91 @@
+{
+    "gender_tag": {
+        "tag_name": "Gender",
+        "variable_type": "int",
+        "values": [
+            {
+                "raw_value": "0",
+                "translated_value": {
+                    "translate": "tooltip.dragnlivestock.jade.female.tooltip",
+                    "color": "#fc037e"
+                },
+                "gender_enum": "female"
+            },
+            {
+                "raw_value": "1",
+                "translated_value": {
+                    "translate": "tooltip.dragnlivestock.jade.male.tooltip",
+                    "color": "#0380fc"
+                },
+                "gender_enum": "male"
+            }
+        ]
+    },
+    "tags": [
+        {
+            "tag_name": "Breed",
+            "translated_name": {
+                "translate": "Breed"
+            },
+            "variable_type": "int",
+            "mapped_values": {
+                "0": {
+                    "translate": "Classic"
+                },
+                "1": {
+                    "translate": "Meat"
+                },
+                "2": {
+                    "translate": "Nubian"
+                },
+                "3": {
+                    "translate": "Warm"
+                },
+                "4": {
+                    "translate": "Fibrous"
+                },
+                "5": {
+                    "translate": "Dairy"
+                }
+            }
+        },
+        {
+            "tag_name": "HornType",
+            "translated_name": {
+                "translate": "Horn Type"
+            },
+            "variable_type": "int",
+            "mapped_values": {
+                "0": {
+                    "translate": "No Horns"
+                },
+                "1": {
+                    "translate": "Backward Curled"
+                },
+                "2": {
+                    "translate": "Small"
+                },
+                "3": {
+                    "translate": "Polycerate"
+                },
+                "4": {
+                    "translate": "Upward Curled"
+                },
+                "5": {
+                    "translate": "Corkscrew"
+                },
+                "6": {
+                    "translate": "Outwards Fanning"
+                }
+            }
+        },
+        {
+            "tag_name": "Quality",
+            "translated_name": {
+                "translate": "Quality (%)"
+            },
+            "variable_type": "int",
+            "mapped_values": {}
+        }
+    ]
+}

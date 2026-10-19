@@ -1,0 +1,77 @@
+{
+  "gender_tag": {
+    "tag_name": "gender",
+    "variable_type": "byte",
+    "values": [
+      {
+        "raw_value": "0",
+        "translated_value": {
+          "translate": "entity.horse_colors.donkey.female",
+          "color": "#fc037e"
+        },
+        "gender_enum": "female",
+        "required_tags": [
+          {
+            "tag_name": "fertile",
+            "variable_type": "byte",
+            "values": [
+              "1"
+            ]
+          }
+        ]
+      },
+      {
+        "raw_value": "0",
+        "translated_value": {
+          "translate": "entity.horse_colors.donkey.female",
+          "color": "#aa557f"
+        },
+        "gender_enum": "female",
+        "required_tags": [
+          {
+            "tag_name": "fertile",
+            "variable_type": "byte",
+            "values": [
+              "0"
+            ]
+          }
+        ]
+      },
+      {
+        "raw_value": "1",
+        "translated_value": {
+          "translate": "entity.horse_colors.donkey.male",
+          "color": "#557faa"
+        },
+        "gender_enum": "male",
+        "required_tags": [
+          {
+            "tag_name": "fertile",
+            "variable_type": "byte",
+            "values": [
+              "1"
+            ]
+          }
+        ]
+      },
+      {
+        "raw_value": "1",
+        "translated_value": {
+          "translate": "entity.horse_colors.donkey.neuter",
+          "color": "#557faa"
+        },
+        "gender_enum": "male",
+        "required_tags": [
+          {
+            "tag_name": "fertile",
+            "variable_type": "byte",
+            "values": [
+              "0"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "tags": []
+}

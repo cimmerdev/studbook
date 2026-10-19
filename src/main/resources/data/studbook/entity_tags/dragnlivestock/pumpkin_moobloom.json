@@ -1,0 +1,79 @@
+{
+  "gender_tag": {
+    "tag_name": "Gender",
+    "variable_type": "int",
+    "values": [
+      {
+        "raw_value": "0",
+        "translated_value": {
+          "translate": "tooltip.dragnlivestock.jade.female.tooltip",
+          "color": "#fc037e"
+        },
+        "gender_enum": "female"
+      },
+      {
+        "raw_value": "1",
+        "translated_value": {
+          "translate": "tooltip.dragnlivestock.jade.male.tooltip",
+          "color": "#0380fc"
+        },
+        "gender_enum": "male"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "tag_name": "Breed",
+      "translated_name": {
+        "translate": "Breed"
+      },
+      "variable_type": "int",
+      "mapped_values": {
+        "0": {
+          "translate": "Angus"
+        },
+        "1": {
+          "translate": "Longhorn"
+        },
+        "2": {
+          "translate": "Brahman"
+        },
+        "3": {
+          "translate": "Mini"
+        },
+        "4": {
+          "translate": "Watusi"
+        },
+        "5": {
+          "translate": "Corriente"
+        },
+        "6": {
+          "translate": "Holstein"
+        },
+        "7": {
+          "translate": "Jersey"
+        },
+        "8": {
+          "translate": "Hereford"
+        },
+        "9": {
+          "translate": "Highland"
+        },
+        "10": {
+          "translate": "Ox"
+        },
+        "11": {
+          "translate": "Spanish Fighting"
+        }
+      }
+    },
+    {
+      "tag_name": "Quality",
+      "translated_name": {
+        "translate": "Quality (%)"
+      },
+      "variable_type": "int",
+      "mapped_values": {}
+    }
+  ]
+}

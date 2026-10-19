@@ -1,0 +1,41 @@
+{
+  "gender_tag": {
+    "tag_name": "Gender",
+    "variable_type": "int",
+    "values": [
+      {
+        "raw_value": "0",
+        "translated_value": {
+          "translate": "tooltip.dragnlivestock.jade.female.tooltip",
+          "color": "#fc037e"
+        },
+        "gender_enum": "female"
+      },
+      {
+        "raw_value": "1",
+        "translated_value": {
+          "translate": "tooltip.dragnlivestock.jade.male.tooltip",
+          "color": "#0380fc"
+        },
+        "gender_enum": "male"
+      }
+    ]
+  },
+  "tags": [
+    {
+      "tag_name": "Wooly",
+      "translated_name": {
+        "translate": "Type"
+      },
+      "variable_type": "int",
+      "mapped_values": {
+        "0": {
+          "translate": "Flocculent"
+        },
+        "1": {
+          "translate": "Wooly"
+        }
+      }
+    }
+  ]
+}
