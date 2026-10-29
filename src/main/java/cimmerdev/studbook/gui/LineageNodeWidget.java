@@ -34,7 +34,7 @@ public class LineageNodeWidget extends AbstractWidget {
         int textX = getX() + (this.width / 3);
         int textY = getY() + PADDING + (FONT_LINE_HEIGHT / 2);
         int maxWidth = (this.width / 3 * 2) - PADDING;
-        textWidget.setMaxWidth(maxWidth); // TODO: test if this can be moved to initialization - can I stay there?
+        textWidget.setMaxWidth(maxWidth);
         textWidget.setPosition(textX, textY);
         iconsWidget.setMaxWidth(maxWidth);
         iconsWidget.setPosition((getX() + width - PADDING - iconsWidget.getWidth()*2)/2, (getY() + height - PADDING*2 - iconsWidget.getHeight())/2);
