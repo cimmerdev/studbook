@@ -22,7 +22,7 @@ public class VanillaEntityTags {
             String value = String.format("%.1f", result / 2);
             Component translated_value = Component.empty()
                     .append(Component.literal(value).withStyle(style -> style.withColor(getAttributeColorByRarity(result, 15.f, 30.f))))
-                    .append(Component.literal(" heart(s)"));
+                    .append(Component.translatable("studbook.units.generic.max_health"));
             Component translated_name = Component.translatable("attribute.name.generic.max_health");//.withStyle(ChatFormatting.YELLOW);
                 list.add(new EntityInfoEntry(translated_name, translated_value));
         }
@@ -33,7 +33,7 @@ public class VanillaEntityTags {
             String value = String.format("%.2f", result * 42.16);
             Component translated_value = Component.empty()
                     .append(Component.literal(value).withStyle(style -> style.withColor(getAttributeColorByRarity(result, 0.1125f, 0.3375f))))
-                    .append(Component.literal(" m/s"));
+                    .append(Component.translatable("studbook.units.generic.movement_speed"));
             Component translated_name = Component.translatable("attribute.name.generic.movement_speed"); //.withStyle(ChatFormatting.YELLOW);
             list.add(new EntityInfoEntry(translated_name, translated_value));
         }
@@ -44,7 +44,7 @@ public class VanillaEntityTags {
             String value = String.format("%.2f", getJumpHeightBlocksPerSecond(result));
             Component translated_value = Component.empty()
                     .append(Component.literal(value).withStyle(style -> style.withColor(getAttributeColorByRarity(result, 0.4f, 1.f))))
-                    .append(Component.literal(" m"));
+                    .append(Component.translatable("studbook.units.horse.jump_strength"));
             Component translated_name = Component.translatable("attribute.name.horse.jump_strength");
             list.add(new EntityInfoEntry(translated_name, translated_value));
         }

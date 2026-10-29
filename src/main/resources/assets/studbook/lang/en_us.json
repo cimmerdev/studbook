@@ -17,5 +17,8 @@
   "studbook.gui.sidepanel.birth.days_since": "born on day %d",
   "studbook.gui.sidepanel.death.days_ago": ", %d day(s) ago",
   "studbook.gui.sidepanel.death.days_since": ", on day %d",
-  "studbook.gui.viewport.title": "Lineage Tree Viewport"
+  "studbook.gui.viewport.title": "Lineage Tree Viewport",
+  "studbook.units.generic.movement_speed": " m/s",
+  "studbook.units.generic.max_health": " heart(s)",
+  "studbook.units.horse.jump_strength": " m"
 }
