@@ -4,6 +4,8 @@
 
  Minecraft mod for tracking lineage of your animals
 
+ [CurseForge](https://www.curseforge.com/minecraft/mc-mods/studboo)
+
 ## Features
 
 - **Dynamic genealogical trees** - GUI with interactive node graph showcasing entity's ancestry and offspring
