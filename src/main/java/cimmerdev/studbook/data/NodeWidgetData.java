@@ -10,6 +10,7 @@ import net.minecraft.world.entity.Entity;
 import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.LivingEntity;
 import net.minecraft.world.entity.Mob;
+import net.minecraft.world.phys.Vec3;
 import net.minecraftforge.registries.ForgeRegistries;
 
 import java.util.ArrayList;
@@ -35,7 +36,6 @@ public class NodeWidgetData {
     final public List<UUID> children;
     final public int generation;
     private LivingEntity cachedEntity = null;
-    private boolean isDirty = true;
 
     public NodeWidgetData(int x, int y, UUID uuid, ResourceLocation entityType, String name, CompoundTag entityTag, EntityStatus status, String breeder, long birthTimeWorld, Component deathCause, long deathTimeWorld, UUID parentA, UUID parentB, List<UUID> children, int generation) {
         this.x = x;
@@ -68,7 +68,7 @@ public class NodeWidgetData {
     public UUID getParentB() { return parentB; }
 
     public LivingEntity getOrCreateClientEntity() {
-        if (cachedEntity != null && !isDirty) {
+        if (cachedEntity != null) {
             return cachedEntity;
         }
         Minecraft mc = Minecraft.getInstance();
@@ -82,10 +82,18 @@ public class NodeWidgetData {
             if (entity instanceof LivingEntity livingEntity) {
                 livingEntity.load(entityTag.copy());
                 cachedEntity = livingEntity;
-                isDirty = false;;
                 LocalPlayer player = mc.player;
                 if (player != null) {
                     cachedEntity.tickCount = mc.player.tickCount;
+
+                    Vec3 cameraDirection = mc.player.getLookAngle();
+                    double maxDimension = Math.max(entity.getBbWidth(), entity.getBbHeight());
+                    double distance = maxDimension + 0.1D;
+                    double targetX = mc.player.getX() + (cameraDirection.x * distance);
+                    double targetY = mc.player.getEyeY() + (cameraDirection.y * distance) - (entity.getBbHeight() / 2.0D);
+                    double targetZ = mc.player.getZ() + (cameraDirection.z * distance);
+                    cachedEntity.moveTo(targetX, targetY, targetZ);
+                    cachedEntity.setBoundingBox(entity.getType().getDimensions().makeBoundingBox(player.getX(), player.getY(), player.getZ()));
                 }
                 cachedEntity.setYRot(0.0F);
                 cachedEntity.setXRot(0.0F);
@@ -106,6 +114,7 @@ public class NodeWidgetData {
                     mob.setTarget(null);
                     mob.setLastHurtByMob(null);
                     mob.getNavigation().stop();
+                    mob.noCulling = true;
                 }
                 return cachedEntity;
             }
