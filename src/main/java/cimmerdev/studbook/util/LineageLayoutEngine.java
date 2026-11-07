@@ -93,6 +93,61 @@ public class LineageLayoutEngine {
             }
         }
 
+        // additional iterations to spread out children
+        final int MAX_SPREAD_ITER = 5;
+        for (int iter = 0; iter < MAX_SPREAD_ITER; iter++) {
+            boolean anySpread = false;
+
+            for (NodeWidgetData d : nodesData) {
+                UUID pa = d.getParentA();
+                UUID pb = d.getParentB();
+                if (pa == null || pb == null) continue;
+                if (!xPos.containsKey(pa) || !xPos.containsKey(pb)) continue;
+
+                int genPa = genOf.getOrDefault(pa, 1);
+                int genPb = genOf.getOrDefault(pb, 1);
+                if (genPa == genPb) continue; // same-gen pair handled by spacing alone
+
+                double xPa = xPos.get(pa);
+                double xPb = xPos.get(pb);
+                double childX = xPos.get(d.uuid);
+                double dist = Math.abs(xPa - xPb);
+
+                if (dist < spacing) {
+                    // spread symmetrically around the child, lower generation goes left, higher goes right.
+                    double offset = spacing * 0.6;
+                    UUID left, right;
+                    if (genPa <= genPb) {
+                        left = pa;
+                        right = pb;
+                    } else {
+                        left = pb;
+                        right = pa;
+                    }
+                    xPos.put(left, childX - offset);
+                    xPos.put(right, childX + offset);
+                    anySpread = true;
+                }
+            }
+
+            if (!anySpread) break;
+
+            // enforce minimum spacing in every generation that was touched
+            for (int gen = 1; gen <= maxGen; gen++) {
+                List<UUID> nodes = byGeneration.get(gen);
+                if (nodes.isEmpty()) continue;
+
+                Map<UUID, Double> genPos = new HashMap<>();
+                for (UUID id : nodes) {
+                    genPos.put(id, xPos.get(id));
+                }
+                enforceMinimumSpacing(genPos, spacing);
+                for (UUID id : nodes) {
+                    xPos.put(id, genPos.get(id));
+                }
+            }
+        }
+
         // dev inserted Y coordinate calculation
         Map<UUID, Integer> Ypos = new HashMap<>();
         for(NodeWidgetData d : nodesData) {
