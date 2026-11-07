@@ -138,6 +138,17 @@ public class LineageManager extends SavedData {
             getAncestorsTreeRecursive(node, Ancestors);
         }
         Ancestors.addAll(Descendants);
+        // we include siblings of current node as well
+        if(database.get(currentNode.data.getParentA()) != null) {
+            for (UUID childId : database.get(currentNode.data.getParentA()).data.getChildren()) {
+                Ancestors.add(database.get(childId));
+            }
+        }
+        if(database.get(currentNode.data.getParentB()) != null) {
+            for (UUID childId : database.get(currentNode.data.getParentB()).data.getChildren()) {
+                Ancestors.add(database.get(childId));
+            }
+        }
         return Ancestors;
     }
 

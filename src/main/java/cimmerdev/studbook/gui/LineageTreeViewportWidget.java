@@ -1,9 +1,11 @@
 package cimmerdev.studbook.gui;
 
+import cimmerdev.studbook.Studbook;
 import cimmerdev.studbook.data.NodeWidgetData;
 import com.mojang.blaze3d.vertex.PoseStack;
 import com.mojang.blaze3d.vertex.VertexConsumer;
 import cimmerdev.studbook.util.Color;
+import com.mojang.logging.LogUtils;
 import net.minecraft.client.gui.GuiGraphics;
 import net.minecraft.client.gui.components.AbstractWidget;
 import net.minecraft.client.gui.narration.NarrationElementOutput;
@@ -84,7 +86,8 @@ public class LineageTreeViewportWidget extends AbstractWidget {
                 }
                 //draw children lines as well even if they're not visible
                 for (UUID uuid : entry.getValue().data.children) {
-                    drawLinesBetweenParentsAndChild(graphics, nodes.get(uuid).data.parentA, nodes.get(uuid).data.parentB, nodes.get(uuid), LINE_COLOR_DEFAULT);
+                    if (nodes.get(uuid) != null) drawLinesBetweenParentsAndChild(graphics, nodes.get(uuid).data.parentA, nodes.get(uuid).data.parentB, nodes.get(uuid), LINE_COLOR_DEFAULT);
+                    else Studbook.LOGGER.warn("[Studbook] Error accessing record data for child entity({}) of parent entity({}) on client.", uuid, entry.getKey());
                 }
             }
         }
