@@ -24,17 +24,17 @@ public enum LineageClientProvider implements IEntityComponentProvider {
             }
 
             if (serverData.contains("ParentB")) {
-                String str = serverData.getString("studbook.compat.jade.tooltip.parentb");
+                String str = serverData.getString("ParentB");
                 tooltip.add(Component.translatable("studbook.compat.jade.tooltip.parentb", str));
             }
 
             if (serverData.contains("Sire")) {
-                String str = serverData.getString("studbook.compat.jade.tooltip.sire");
+                String str = serverData.getString("Sire");
                 tooltip.add(Component.translatable("studbook.compat.jade.tooltip.sire", str));
             }
 
             if (serverData.contains("Dam")) {
-                String str = serverData.getString("studbook.compat.jade.tooltip.dam");
+                String str = serverData.getString("Dam");
                 tooltip.add(Component.translatable("studbook.compat.jade.tooltip.dam", str));
             }
         }
